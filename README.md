@@ -62,3 +62,8 @@ Example file:
 5. The mule runtime will start up and automatically apply your policy to the app.
 6. Call the app to trigger your policy, `curl http://localhost:8081/app-1`
 7. After making changes to the app, simple run the CLI command `update` to redploy and reapply your policy!
+8. If adding new config fields, simply repeat the step above after updating the policy-config.json! `update`
+
+### Viewing app logs:
+
+`tail -f ${MULE_HOME}/logs/app-1-hello-world.log`
