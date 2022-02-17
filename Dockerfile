@@ -38,7 +38,6 @@ RUN cp ${MULE_HOME}/lib/boot/wrapper.jar ${MULE_HOME}/lib/boot/wrapper-3.5.45.ja
 # Copy over Apps and Domains
 COPY apps/ ${MULE_HOME}/apps/
 COPY domains/ ${MULE_HOME}/domains/
-COPY policies/ ${MULE_HOME}/policies/
 
 EXPOSE 8081/tcp
 
