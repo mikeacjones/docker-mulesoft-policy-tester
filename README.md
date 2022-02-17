@@ -20,7 +20,7 @@ The endpiont is: `/app-1`
 
 ### Build the Image
 1. Clone report: `git clone https://github.com/nonamesec/mulesoft-policy-testing-docker`
-2. Build Image by executing `docker build -t mule-policy-tester` from repo folder
+2. Build Image by executing `docker build -t mule-policy-tester .` from repo folder
 
 ### Test the policy
 1. Ensure that POM.XML has the `groupId` set to `sec.noname`
@@ -58,7 +58,7 @@ Example file:
 }
 ```
 
-4. From the policy folder, execute `docker run -it -v "$(pwd)":/opt/mule/policy-source mule-policy-tester`
+4. From the policy folder, execute `docker run --rm -it -v "$(pwd)":/opt/mule/policy-source mule-policy-tester`
 5. The mule runtime will start up and automatically apply your policy to the app.
 6. Call the app to trigger your policy, `curl http://localhost:8081/app-1`
 7. After making changes to the app, simple run the CLI command `update` to redploy and reapply your policy!
