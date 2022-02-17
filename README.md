@@ -2,6 +2,8 @@
 
 This container is designed to faciliate the local testing of custom MuleSoft policies.
 
+![Preview GIF](./.images/preview.gif)
+
 By default, the container starts up with the following apps:
 
 ## Hello World
