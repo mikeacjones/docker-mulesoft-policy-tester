@@ -14,6 +14,7 @@ RUN apt-get install -qq wget
 RUN apt-get install -qq unzip
 RUN apt-get install -qq maven
 RUN apt-get install -qq curl
+RUN apt-get install -qq vim
 
 # Set our working directory
 WORKDIR /opt
