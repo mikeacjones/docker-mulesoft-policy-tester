@@ -21,7 +21,7 @@ The endpiont is: `/app-1`
 ## Usage
 
 ### Build the Image
-1. Clone report: `git clone https://github.com/nonamesec/mulesoft-policy-testing-docker`
+1. Clone this repository
 2. Build Image by executing `docker build -t mule-policy-tester .` from repo folder
 
 ### Test the policy
