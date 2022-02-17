@@ -24,7 +24,7 @@ The endpiont is: `/app-1`
 
 ### Test the policy
 1. Ensure that POM.XML has the `groupId` set to `sec.noname`
-2. Ensure that POM.XML has the `version` set to `${env.VERSION}`
+2. Ensure that POM.XML has the `version` set to `${VERSION}`
 3. In the policy source code folder, create a file called `policy-config.json`
 
 Example file:
