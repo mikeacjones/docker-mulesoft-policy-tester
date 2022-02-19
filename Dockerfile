@@ -43,7 +43,8 @@ COPY domains/ ${MULE_HOME}/domains/
 EXPOSE 8081/tcp
 
 # Setup mount points and folders for policy testing
-RUN mkdir /opt/mule/policy-source/
+RUN mkdir ${MULE_HOME}/policy-source/
+RUN mkdir ${MULE_HOME}/policy-staging/
 VOLUME ["/opt/mule/apps", "/opt/mule/policies/offline-policies", "/opt/mule/policies/policy-templates", "/opt/mule/policy-source"]
 
 # Copy over scripts and create bash alias
@@ -55,4 +56,4 @@ RUN echo "alias update='${MULE_HOME}/redeploy.sh'" >> ~/.bash_aliases
 
 
 #CMD ["/bin/bash"]
-CMD ["sh", "-c", "/opt/mule/start.sh ; /opt/mule/bin/mule start -M-Danypoint.platform.gatekeeper=disabled ; /bin/bash"]
+CMD ["sh", "-c", "/opt/mule/start.sh && /opt/mule/bin/mule start -M-Danypoint.platform.gatekeeper=disabled && /bin/bash"]
