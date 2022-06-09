@@ -57,7 +57,7 @@ Example file:
 }
 ```
 
-4. From the policy folder, execute `docker run --rm -p 8081:8081 -it -v "$(pwd)":/opt/mule/policy-source mule-policy-tester`. With this command, we are mounting the source code to `/opt/mule/policy-source`. You must mount your code here or your policy will need be applied. The `--rm` ensures our docker image cleans itself up when we exit. The `-p 8081:8081` allows you to call the test APIs from your local machine, allowing use of tools like Postman and Insomnia.
+4. From the policy folder, execute `docker run --rm -p 8081:8081 -it -v "$(pwd)":/opt/mule/policy-source mule-policy-tester`. With this command, we are mounting the source code to `/opt/mule/policy-source`. You must mount your code here or your policy will not be applied. The `--rm` ensures our docker image cleans itself up when we exit. The `-p 8081:8081` allows you to call the test APIs from your local machine, allowing use of tools like Postman and Insomnia.
 5. The mule runtime will start up and automatically apply your policy to the app.
 6. Call the app to trigger your policy, `curl http://localhost:8081/app-1`
 7. After making changes to the app, simple run the CLI command `update` to redploy and reapply your policy!
